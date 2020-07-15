@@ -63,4 +63,4 @@ if (person5.age >= 18 && person5.age <= 27 &&
 	personsNamesForArmy.push(person5.name);
 }
 console.log(personsNamesForArmy);
-alert(personsNamesForArmy);
+alert('You in the army now: ' + personsNamesForArmy);
