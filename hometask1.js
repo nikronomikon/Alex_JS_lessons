@@ -1,32 +1,32 @@
-let prizivnikInfo1 = {
+let person1 = {
 	name: 'Дарт Вэйдер',
 	age: 39,
 	gender: 'male',
 	citizenship: 'sith',
 	health: 'bad',
 };
-let prizivnikInfo2 = {
+let person2 = {
 	name: 'Аникей Скайвокер',
 	age: 19,
 	gender: 'male',
 	citizenship: 'белорус',
 	health: 'good',
 };
-let prizivnikInfo3 = {
+let person3 = {
 	name: 'Иван Джугашвили',
 	age: 24,
 	gender: 'male',
     citizenship: 'космополит',
 	health: 'good',
 };
-let prizivnikInfo4 = {
+let person4 = {
 	name: 'Булат Окуджава',
 	age: 23,
 	gender: 'male',
 	citizenship: 'белорус',
 	health: 'good',
 };
-let prizivnikInfo5 = {
+let person5 = {
 	name: 'Светлана Иванова',
 	age: 26,
 	gender: 'female',
@@ -35,32 +35,32 @@ let prizivnikInfo5 = {
 };
 let personsNamesForArmy = [];
 
-if (prizivnikInfo1.age >= 18 && prizivnikInfo1.age <= 27 && 
-	prizivnikInfo1.gender === 'male' &&
-	prizivnikInfo1.citizenship === 'белорус' &&
-	prizivnikInfo1.health === 'good') {
-	personsNamesForArmy.push( prizivnikInfo1.name );
+if (person1.age >= 18 && person1.age <= 27 && 
+	person1.gender === 'male' &&
+	person1.citizenship === 'белорус' &&
+	person1.health === 'good') {
+	personsNamesForArmy.push( person1.name );
 }
-if ( prizivnikInfo2.age >= 18 && prizivnikInfo2.age <= 27 && prizivnikInfo2.gender == 'male' && prizivnikInfo2.citizenship == 'белорус' && prizivnikInfo2.health == 'good' ) {
-	personsNamesForArmy.push(prizivnikInfo2.name);
+if ( person2.age >= 18 && person2.age <= 27 && person2.gender == 'male' && person2.citizenship == 'белорус' && person2.health == 'good' ) {
+	personsNamesForArmy.push(person2.name);
 }
-if (prizivnikInfo3.age >= 18 && prizivnikInfo3.age <= 27 && 
-	prizivnikInfo3.gender === 'male' &&
-	prizivnikInfo3.citizenship === 'белорус' &&
-	prizivnikInfo3.health === 'good') {
-	personsNamesForArmy.push(prizivnikInfo3.name);
+if (person3.age >= 18 && person3.age <= 27 && 
+	person3.gender === 'male' &&
+	person3.citizenship === 'белорус' &&
+	person3.health === 'good') {
+	personsNamesForArmy.push(person3.name);
 }
-if (prizivnikInfo4.age >= 18 && prizivnikInfo4.age <= 27 && 
-	prizivnikInfo4.gender === 'male' &&
-	prizivnikInfo4.citizenship === 'белорус' &&
-	prizivnikInfo4.health === 'good') {
-	personsNamesForArmy.push(prizivnikInfo4.name);
+if (person4.age >= 18 && person4.age <= 27 && 
+	person4.gender === 'male' &&
+	person4.citizenship === 'белорус' &&
+	person4.health === 'good') {
+	personsNamesForArmy.push(person4.name);
 }
-if (prizivnikInfo5.age >= 18 && prizivnikInfo5.age <= 27 && 
-	prizivnikInfo5.gender === 'male' &&
-	prizivnikInfo5.citizenship === 'белорус' &&
-	prizivnikInfo5.health === 'good') {
-	personsNamesForArmy.push(prizivnikInfo5.name);
+if (person5.age >= 18 && person5.age <= 27 && 
+	person5.gender === 'male' &&
+	person5.citizenship === 'белорус' &&
+	person5.health === 'good') {
+	personsNamesForArmy.push(person5.name);
 }
 console.log(personsNamesForArmy);
 alert(personsNamesForArmy);
