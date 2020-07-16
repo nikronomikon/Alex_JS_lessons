@@ -33,7 +33,7 @@ let person5 = {
 	citizenship: 'белоруска',
 	health: 'good',
 };
-let personsNamesForArmy = [];
+const personsNamesForArmy = [];
 
 if (person1.age >= 18 && person1.age <= 27 && 
 	person1.gender === 'male' &&
