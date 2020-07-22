@@ -34,7 +34,7 @@ const people = [{
     desiredAlcoholName: 'water',
     desiredAlcoholAmount: 1,
 }], 
-// pls make at least 5 alcohol
+      
 alcoholPriceForOneItem = {
     whisky: 23,
     vodka: 15,
@@ -42,21 +42,8 @@ alcoholPriceForOneItem = {
     water: 0,
     lsd: 500,
 },
-
-LEGAL_AGE = 18;   // don't change this
-
-
-/**
- * Function is used to filter array of objects by age param, name of param is passed as second argument
- * If object has age above LEGAL_AGE -> it's returned in new array 
- * @param {Array} arr
- * @param {String} ageParamName
- * Returns filtered array
- * f.e function is called getLegalAgePeople(people, 'age');
- * 
- * tip: use .filter method
- */
-
+      
+LEGAL_AGE = 18;
 
 function getLegalAgePeople(arr, ageParamName) {
     const legalAgePeople = arr.filter(function (x) { return x[ageParamName] >= LEGAL_AGE;}) 
@@ -64,33 +51,10 @@ function getLegalAgePeople(arr, ageParamName) {
 }
 
 
-/**
- * Function is used to filter array of objects
- * If object has money amount more than alcohol price multiplied by alcohol amount -> it's returned to new array
- * @param {Array} arr 
- * Returns filtered array
- * f.e function is called getPeopleWhoHaveMoneyForAlcohol(legalAgePeople);
- * 
- * tip: use .filter method
- */
-
 function getPeopleWhoHaveMoneyForAlcohol(arr) {
     const peopleWhoHaveMoney = arr.filter(function (x) { return x.moneyAmount >= x.desiredAlcoholAmount * alcoholPriceForOneItem[x.desiredAlcoholName];}) 
         return peopleWhoHaveMoney; 
-} 
-
-
-/**
- * Function is used to get array of strings
- * @param {Array} arr 
- * Returns filtered array of strings like:
- * ["NAME bought COUNT bottles of ALCOHOL_NAME for SUM rubles"]
- * where NAME is name of person, COUNT is bottles count, ALCOHOL_NAME is name of alcohol, SUM is bottles count multipled by price for a bottle
- * f.e function is called buyAlcohole(legalAgePeople);
- * 
- * tip: use .map method
- */
-
+}
 
 function buyAlcohol(arr) {
     const checkResult = arr.map(function (x) { 
@@ -101,7 +65,8 @@ function buyAlcohol(arr) {
 
 alert(buyAlcohol(getPeopleWhoHaveMoneyForAlcohol(getLegalAgePeople(people, 'age'))));
 
-//x.name + ' bought ' + x.desiredAlcoholAmount + ' bottles of ' + x.desiredAlcoholName + ' for ' + x.desiredAlcoholAmount*alcoholPriceForOneItem[x.desiredAlcoholName] + ' rubles'
+
+// x.name + ' bought ' + x.desiredAlcoholAmount + ' bottles of ' + x.desiredAlcoholName + ' for ' + x.desiredAlcoholAmount*alcoholPriceForOneItem[x.desiredAlcoholName] + ' rubles'
 
 
 
