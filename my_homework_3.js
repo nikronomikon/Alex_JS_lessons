@@ -58,7 +58,7 @@ function getPeopleWhoHaveMoneyForAlcohol(arr) {
 
 function buyAlcohol(arr) {
     const checkResult = arr.map(function (x) { 
-      return [x.name + ' got ' + x.desiredAlcoholAmount + ' of ' + x.desiredAlcoholName + ' for ' + x.desiredAlcoholAmount*alcoholPriceForOneItem[x.desiredAlcoholName] + ' BYN']; 
+      return x.name + ' bought ' + x.desiredAlcoholAmount + ' bottles of ' + x.desiredAlcoholName + ' for ' + x.desiredAlcoholAmount*alcoholPriceForOneItem[x.desiredAlcoholName] + ' rubles'; 
     }) 
         return checkResult; 
 }
@@ -66,7 +66,7 @@ function buyAlcohol(arr) {
 alert(buyAlcohol(getPeopleWhoHaveMoneyForAlcohol(getLegalAgePeople(people, 'age'))));
 
 
-// x.name + ' bought ' + x.desiredAlcoholAmount + ' bottles of ' + x.desiredAlcoholName + ' for ' + x.desiredAlcoholAmount*alcoholPriceForOneItem[x.desiredAlcoholName] + ' rubles'
+// x.name + ' got ' + x.desiredAlcoholAmount + ' of ' + x.desiredAlcoholName + ' for ' + x.desiredAlcoholAmount*alcoholPriceForOneItem[x.desiredAlcoholName] + ' BYN'
 
 
 
