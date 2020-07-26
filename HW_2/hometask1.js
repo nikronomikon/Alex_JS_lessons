@@ -64,3 +64,13 @@ if (person5.age >= 18 && person5.age <= 27 &&
 }
 console.log(personsNamesForArmy);
 alert('You in the army now: ' + personsNamesForArmy);
+
+// или вот так
+
+const personsArr = [];
+personsArr.push(person1); personsArr.push(person2); personsArr.push(person3); personsArr.push(person4); personsArr.push(person5);
+
+let personsArrForArmy = personsArr.filter((x) => (x.age >= 18 && x.age <= 27 && x.gender === 'male' &&
+	x.citizenship === 'белорус' && x.health === 'good'));
+let personsNamesForArmy = personsArrForArmy.map ((x) => x.name + ' иди получи сапоги')
+console.log(personsNamesForArmy);
