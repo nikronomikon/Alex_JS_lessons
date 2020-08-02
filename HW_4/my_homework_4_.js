@@ -60,20 +60,25 @@ const fruitsBought = []; //push fruit here after buying
 let sortedFruits = getFruitsMap(fruits);
 
 let buyFruits = customersArr => {
-  let log = [];
-for (let customer of customers) {
-   log.push(customer.name);
+for (let customer of customersArr) {
+   logs.push(customer.name);
     for (let fruit of customer.fruitsToBuy) {
-      log.push(fruit.name);
-      if (fruit.count <= sortedFruits[fruit.name]) {
-        log.push('success'); 
-        for (let i = 0; i != fruit.count; i++){
-          fruitsBought.push(fruit.name);
-       }
+      logs.push(fruit.name);
+      if (fruit.count <= sortedFruits[fruit.name]) { 
+         logs.push('success');
+         for (let i = 0; i != fruit.count; i++){
+               delete fruits[fruits.findIndex(item => item == fruit.name)];
+               fruitsBought.push(fruit.name); 
+            }
+      } 
+      else { logs.push('fail');
+             for (let j = 0; j != sortedFruits[fruit.name]; j++){
+             delete fruits[fruits.findIndex(item => item == fruit.name)];
+             fruitsBought.push(fruit.name);}
+      }
     }
 } 
-}
-logs.push(log);
+logs;
 }
 
 
