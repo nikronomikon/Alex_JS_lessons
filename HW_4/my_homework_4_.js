@@ -61,24 +61,27 @@ let sortedFruits = getFruitsMap(fruits);
 
 let buyFruits = customersArr => {
 for (let customer of customersArr) {
-   logs.push(customer.name);
+   let customerName = customer.name;
     for (let fruit of customer.fruitsToBuy) {
-      logs.push(fruit.name);
+      let fruitName = fruit.name;
       if (fruit.count <= sortedFruits[fruit.name]) { 
-         logs.push('success');
+         let success = 'good shoping';
          for (let i = 0; i != fruit.count; i++){
-               delete fruits[fruits.findIndex(item => item == fruit.name)];
-               fruitsBought.push(fruit.name); 
+                let fruitIndex = fruits.findIndex(item => item == fruit.name);
+                fruits.splice(fruitIndex, 1);
+                fruitsBought.push(fruit.name);
             }
+         logs.push([customerName, fruitName, success]);
       } 
-      else { logs.push('fail');
+      else { let success = 'not enough fruits';
              for (let j = 0; j != sortedFruits[fruit.name]; j++){
-             delete fruits[fruits.findIndex(item => item == fruit.name)];
-             fruitsBought.push(fruit.name);}
+                let fruitIndex = fruits.findIndex(item => item == fruit.name);
+                fruits.splice(fruitIndex, 1);
+                fruitsBought.push(fruit.name); }
+            logs.push([customerName, fruitName, success]);
       }
-    }
+    }  
 } 
-logs;
 }
 
 
