@@ -65,20 +65,20 @@ for (let customer of customersArr) {
     for (let fruit of customer.fruitsToBuy) {
       let fruitName = fruit.name;
       if (fruit.count <= sortedFruits[fruit.name]) { 
-         let success = 'good shoping';
+         let success = true;
          for (let i = 0; i != fruit.count; i++){
                 let fruitIndex = fruits.findIndex(item => item == fruit.name);
                 fruits.splice(fruitIndex, 1);
                 fruitsBought.push(fruit.name);
             }
-         logs.push([customerName, fruitName, success]);
+         log(customerName, fruitName, success);
       } 
-      else { let success = 'not enough fruits';
+      else { let success = false;
              for (let j = 0; j != sortedFruits[fruit.name]; j++){
                 let fruitIndex = fruits.findIndex(item => item == fruit.name);
                 fruits.splice(fruitIndex, 1);
                 fruitsBought.push(fruit.name); }
-            logs.push([customerName, fruitName, success]);
+            log(customerName, fruitName, success);
       }
     }  
 } 
