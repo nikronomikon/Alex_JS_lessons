@@ -26,20 +26,15 @@ let clearRight = () => {
     let existingText = document.getElementsByClassName('new_element')[0];
     existingText.remove();
 }
-/* 
-let setColorBlack = () => {
-    let textColorEl = document.getElementsByClassName('converted_text')[0];
-    textColorEl.setAttribute('color', 'black');
-}
-let setColorBlue = () => {
-    let textColorEl = document.getElementsByClassName('converted_text')[0];
-    textColorEl.setAttribute('color', 'blue');
-}
-let setColorCoral = () => {
-    let textColorEl = document.getElementsByClassName('converted_text')[0];
-    textColorEl.setAttribute('color', 'coral');
-}
-*/
+let setColor = () => {
+        var color = document.getElementById('colorSelect');
+        let existingDiv = document.getElementsByClassName('new_element')[0];
+        if (color.value == "black"){
+            existingDiv.style.color = 'black'
+        } else if (color.value == "blue") {
+            existingDiv.style.color = '#2E97F2'
+        } else if (color.value == "coral") {
+            existingDiv.style.color = 'coral'
+        }
 
-
-// </br>Новый <i>текст</i> он <b>важный</b> самый!
+}
