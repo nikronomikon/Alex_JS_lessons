@@ -10,8 +10,9 @@
 <body>
     <section class="main_container">
         <div class="child_container container_left">
-            <div class=" container_header">
-                <button name="clear_button_left" id="clear_button_left" onclick="clearLeft()">Clear</button>
+            <div class=" container_header header_left">
+                <button name="clear_button_left" id="clear_button_left">Clear</button>
+                <button id="frsong" onclick="songfunc()">?</button>                      
             </div>
             <div class="text_container input_text">
                 <textarea name="textarea" id="input_text" placeholder="Enter your text here..." cols="30" rows="10"></textarea>
@@ -19,17 +20,17 @@
         </div>
         <div class="child_container container_center">
             <div class="inner_container">
-               <button id="convert_button" onclick="convertClickFunc()">Convert</button> 
+               <button id="convert_button">Convert</button> 
             </div>
         </div>
         <div class="child_container container_right">
             <div class="container_header header_right">
-            <button name="clear_button_right" id="clear_button_right" onclick="clearRight()">Clear</button>
-            <select name="font_color" >
-                <option disabled selected hidden style="color: lightgrey; font-weight: 700;">Choose color</option>
-                <option value="black" style="color: black;" onclick="setColorBlack()">Black</option>
-                <option value="blue" style="color: #2E97F2;" onclick="setColorBlue()">Blue</option>
-                <option value="coral" style="color: coral;" onclick="setColorCoral()">Coral</option>
+            <button name="clear_button_right" id="clear_button_right">Clear</button>
+            <select id="colorSelect" name="font_color"> 
+                <option disabled selected hidden>Choose color</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="coral">Coral</option>
             </select>
             </div>
             <div class="text_container">
